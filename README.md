@@ -32,7 +32,7 @@ For modders, please use the CustomKey class when using any of the `AddOnKeyDown`
 
 ### Forum Post
 
-[TBD](https://sfsforum.com/index.php?threads/better-keybinds-alt-shift-and-more.20122/)
+https://sfsforum.com/index.php?threads/better-keybinds-alt-shift-and-more.20122/
 
 ### SFS Modding Guide
 https://kojamori.github.io/SFS-Modding-Guide/
