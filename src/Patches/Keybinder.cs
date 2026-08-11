@@ -115,8 +115,37 @@ public static class KeyBinder_Initialize_Patch
 {
     public static void Postfix(
         KeybindingsPC.Key key,
-        TMPro.TMP_Text ___text)
+        TMPro.TMP_Text ___text,
+        KeyBinder __instance)
     {
+        __instance.button.onRightClick += () =>
+        {
+            key.key = KeyCode.None;
+
+            key.ctrl = false;
+
+            if (key is CustomKey _customKey)
+            {
+                _customKey.leftCtrl = false;
+                _customKey.rightCtrl = false;
+                _customKey.leftShift = false;
+                _customKey.rightShift = false;
+                _customKey.leftAlt = false;
+                _customKey.rightAlt = false;
+
+                ___text.text = Utils.GetDisplayName(_customKey);
+            }
+            else
+            {
+                ___text.text = "None";
+            }
+
+            Traverse
+                .Create(__instance)
+                .Field("apply")
+                .GetValue<Action>()();
+        };
+
         if (key is CustomKey customKey)
             ___text.text = Utils.GetDisplayName(customKey);
     }

@@ -16,6 +16,8 @@ A code mod for the video game Spaceflight Simulator (SFS) that adds the left and
 
 ## Documentation
 
+You can unbind keys by right-clicking on the keybind, which will set their binded key to None.
+
 The current list of accepted modifiers are:
 - Left/Right Ctrl
 - Left/Right Alt
