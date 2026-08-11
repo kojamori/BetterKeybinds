@@ -1,0 +1,37 @@
+# Better Keybinds
+
+A code mod for the video game Spaceflight Simulator (SFS) that adds the left and right Alt and left and right Shift keys to keybinds.
+
+一个用于《Spaceflight Simulator》（SFS）的代码模组，通过增加更多修饰键来增强游戏的按键绑定功能。
+
+## Requirements and Dependencies
+
+## Installation
+
+[Code Mod Installation Guide | SFS Modding Guide](https://kojamori.github.io/SFS-Modding-Guide/getting-started/installation/code-mods)
+
+## Documentation
+
+The current list of accepted modifiers are:
+- Left/Right Ctrl
+- Left/Right Alt
+- Left/Right Shift
+
+In order to add modifiers (e.g. Left Ctrl, Right Ctrl, etc), you have to hold the modifier keys before you click on the keybind option.
+This is to support keybinds that are composed of modifier keys only.
+
+For modders, please use the CustomKey class when using any of the `AddOnKeyDown` methods with `ModKeybindings`.
+
+## Social Media
+
+### Forum Post
+
+TBD
+
+### Discord
+
+[Join the discord server here!](https://discord.gg/QHEmcehAe9)
+
+# License
+
+See the [LICENSE](LICENSE) file for details.
