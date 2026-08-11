@@ -4,7 +4,11 @@ A code mod for the video game Spaceflight Simulator (SFS) that adds the left and
 
 一个用于《Spaceflight Simulator》（SFS）的代码模组，通过增加更多修饰键来增强游戏的按键绑定功能。
 
+![example](./assets/example.png)
+
 ## Requirements and Dependencies
+- SFS (PC Version)
+  - v1.6.00.16 and newer
 
 ## Installation
 
