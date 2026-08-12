@@ -26,7 +26,8 @@ The current list of accepted modifiers are:
 In order to add modifiers (e.g. Left Ctrl, Right Ctrl, etc), you have to hold the modifier keys before you click on the keybind option.
 This is to support keybinds that are composed of modifier keys only.
 
-For modders, please use the CustomKey class when using any of the `AddOnKeyDown` methods with `ModKeybindings`.
+For modders, check this guide out to see how to use this in your mods' keybinds!
+https://kojamori.github.io/SFS-Modding-Guide/mod-creation/code-mods/better-keybinds
 
 ## Social Media
 

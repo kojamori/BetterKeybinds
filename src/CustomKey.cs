@@ -21,6 +21,11 @@ public class CustomKey : KeybindingsPC.Key, I_Key
             leftCtrl = key.ctrl
         };
     }
+
+    public static CustomKey Clone(CustomKey key)
+    {
+        return new CustomKey(key.key, key.leftCtrl, key.rightCtrl, key.leftAlt, key.rightAlt, key.leftShift, key.rightShift, key.ctrl);
+    }
     
     public static implicit operator CustomKey(KeyCode key)
     {
@@ -36,13 +41,14 @@ public class CustomKey : KeybindingsPC.Key, I_Key
         };
     }
     
-    public CustomKey(KeyCode key, bool _leftCtrl = false, bool _rightCtrl = false, bool _leftAlt = false, bool _rightAlt = false, bool leftShift = false, bool rightShift = false)
+    public CustomKey(KeyCode key, bool leftCtrl = false, bool rightCtrl = false, bool leftAlt = false, bool rightAlt = false, bool leftShift = false, bool rightShift = false, bool ctrl = false)
     {
         this.key = key;
-        this.leftCtrl = _leftCtrl;
-        this.rightCtrl = _rightCtrl;
-        this.leftAlt = _leftAlt;
-        this.rightAlt = _rightAlt;
+        this.ctrl = leftCtrl || rightCtrl;
+        this.leftCtrl = leftCtrl;
+        this.rightCtrl = rightCtrl;
+        this.leftAlt = leftAlt;
+        this.rightAlt = rightAlt;
         this.leftShift = leftShift;
         this.rightShift = rightShift;
     }

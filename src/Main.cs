@@ -19,7 +19,7 @@ namespace BetterKeybinds
         public override string DisplayName => "Better Keybinds";
         public override string Author => "kojamori";
         public override string MinimumGameVersionNecessary => "1.6.00.16";
-        public override string ModVersion => "1.1.0";
+        public override string ModVersion => "2.0.0";
         public override string Description => "A mod that adds the left and right Alt and left and right Shift keys to keybinds.";
         public override string IconLink => "";
 
