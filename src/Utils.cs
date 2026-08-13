@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System.Collections.Generic;
+using System.Reflection;
 using HarmonyLib;
 using SFS.Input;
 using UnityEngine;
@@ -9,7 +10,6 @@ public static class Utils
 {
     public static string GetDisplayName(CustomKey key)
     {
-        Debug.Log("getting custom name");
         string modifiers = "";
 
         if (key.leftCtrl)
@@ -58,51 +58,5 @@ public static class Utils
 
             _ => key.ToString()
         };
-    }
-    
-    public static void RefreshDisplayNames()
-    {
-        FieldInfo elementsField = AccessTools.Field(
-            typeof(KeybindingsPC),
-            "elements"
-        );
-
-        if (elementsField?.GetValue(KeybindingsPC.main) is not
-            System.Collections.Generic.List<KeyBinder> elements)
-            return;
-
-        foreach (KeyBinder binder in elements)
-        {
-            FieldInfo keyField = AccessTools.Field(
-                typeof(KeyBinder),
-                "key"
-            );
-
-            FieldInfo textField = AccessTools.Field(
-                typeof(KeyBinder),
-                "text"
-            );
-
-            if (keyField?.GetValue(binder) is not KeybindingsPC.Key key)
-                continue;
-
-            if (textField?.GetValue(binder) is not TMPro.TMP_Text text)
-                continue;
-
-            if (key is CustomKey customKey)
-            {
-                text.text = GetDisplayName(customKey);
-            }
-            else
-            {
-                string displayName = Traverse
-                    .Create(typeof(KeyBinder))
-                    .Method("GetDisplayName", key)
-                    .GetValue<string>();
-
-                text.text = displayName;
-            }
-                
-        }
     }
 }

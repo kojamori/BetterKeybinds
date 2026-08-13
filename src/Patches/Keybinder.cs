@@ -10,17 +10,6 @@ namespace BetterKeybinds;
 [HarmonyPatch(typeof(KeyBinder), nameof(KeyBinder.ProcessInput))]
 public static class KeyBinder_ProcessInput_Patch
 {
-    private static bool IsModifier(KeyCode key)
-    {
-        return key is
-            KeyCode.LeftControl or
-            KeyCode.RightControl or
-            KeyCode.LeftShift or
-            KeyCode.RightShift or
-            KeyCode.LeftAlt or
-            KeyCode.RightAlt;
-    }
-
     public static bool Prefix(
         ref KeybindingsPC.Key ___key,
         Action ___apply,
@@ -92,24 +81,6 @@ public static class KeyBinder_ProcessInput_Patch
     }
 }
 
-/*[HarmonyPatch(typeof(KeyBinder), "GetDisplayName")]
-public static class KeyBinder_GetDisplayName
-{
-    public static bool Prefix(
-        KeybindingsPC.Key k,
-        ref string __result)
-    {
-        if (k is CustomKey customKey)
-        {
-            __result = Utils.GetDisplayName(customKey);
-            return false;
-        }
-
-        return true;
-    }
-}*/
-
-// get patched display name
 [HarmonyPatch(typeof(KeyBinder), nameof(KeyBinder.Initialize))]
 public static class KeyBinder_Initialize_Patch
 {

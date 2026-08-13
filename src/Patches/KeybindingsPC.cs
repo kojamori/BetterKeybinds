@@ -76,15 +76,15 @@ public static class KeybindingsPC_OnLoad_Patch
             KeyCode.F9
         };
 
-        public CustomKey Select_All = CustomKey.Ctrl(KeyCode.A);
+        public CustomKey Select_All = CustomKey.LCtrl(KeyCode.A);
 
         public CustomKey[] CopyPaste =
         {
-            CustomKey.Ctrl(KeyCode.C),
-            CustomKey.Ctrl(KeyCode.V)
+            CustomKey.LCtrl(KeyCode.C),
+            CustomKey.LCtrl(KeyCode.V)
         };
 
-        public CustomKey Duplicate = CustomKey.Ctrl(KeyCode.D);
+        public CustomKey Duplicate = CustomKey.LCtrl(KeyCode.D);
         public CustomKey Delete = KeyCode.Delete;
 
         public CustomKey[] Rotate_Part =
@@ -101,8 +101,8 @@ public static class KeybindingsPC_OnLoad_Patch
             KeyCode.D
         };
 
-        public CustomKey Undo = CustomKey.Ctrl(KeyCode.Z);
-        public CustomKey Redo = CustomKey.Ctrl(KeyCode.Y);
+        public CustomKey Undo = CustomKey.LCtrl(KeyCode.Z);
+        public CustomKey Redo = CustomKey.LCtrl(KeyCode.Y);
 
         public CustomKey Toggle_Ignition = KeyCode.Space;
 

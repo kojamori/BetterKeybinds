@@ -1,5 +1,7 @@
 # Better Keybinds
 
+![logo](./assets/icon.png)
+
 A code mod for the video game Spaceflight Simulator (SFS) that adds the left and right Alt and left and right Shift keys to keybinds.
 
 一个用于《Spaceflight Simulator》（SFS）的代码模组，通过增加更多修饰键来增强游戏的按键绑定功能。
